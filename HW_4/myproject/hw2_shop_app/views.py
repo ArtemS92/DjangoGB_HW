@@ -41,7 +41,7 @@ def order(request, id_order: int):
 
 # вывод списка заказов
 def orders(request):
-    products_all = []
+    
     orders = Order.objects.all()
 
     context = {
@@ -51,13 +51,13 @@ def orders(request):
 
 
 def client_orders(request, id_client: int):
-    products = {}
+    products = []
 
     client = Client.objects.filter(pk=id_client).first()
     orders = Order.objects.filter(buyer=client).all()
 
     for order in orders:
-        products[order.id] = str(order.products.all()).replace('<QuerySet [<', '').replace('>]>', '').split('>, <')
+        products[order.id] = str(order.products.all()).replace('<QuerySet [<', '').replace('>]>', '').split('>','<')
 
     return render(request, 'hw2_shop_app/client_orders.html', {'client': client, 'orders': orders, 'products': products})
 
@@ -72,7 +72,7 @@ def product(request, id_product: int):
 
 
 def client_products_sorted(request, id_client: int, days: int):
-    products = []
+    
     product_set = []
     now = datetime.now()
     before = now - timedelta(days=days)

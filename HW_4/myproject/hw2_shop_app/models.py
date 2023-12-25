@@ -27,8 +27,7 @@ class Product(models.Model):
 
 class Order(models.Model):
     buyer = models.ForeignKey(Client, on_delete=models.CASCADE)
-    products = models.ManyToManyField(
-        Product)  # создается автоматически таблица Order_products связи таблиц Order и Product
+    products = models.ManyToManyField(Product)  # создается автоматически таблица Order_products связи таблиц Order и Product
     total_cost = models.DecimalField(max_digits=8, decimal_places=2)
     date_create_order = models.DateField(auto_now_add=True)
     is_paid = models.BooleanField(default=False)
