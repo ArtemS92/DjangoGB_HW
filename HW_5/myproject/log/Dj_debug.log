@@ -1000,3 +1000,65 @@ INFO 2023-12-25 17:09:15,319 basehttp 13056 13772 "GET /shop/orders/ HTTP/1.1" 2
 INFO 2023-12-25 17:09:38,170 autoreload 13056 18384 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
 INFO 2023-12-25 17:09:38,550 autoreload 16604 13376 Watching for file changes with StatReloader
 INFO 2023-12-25 17:09:42,422 basehttp 16604 10644 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-26 19:04:04,682 autoreload 3508 17356 Watching for file changes with StatReloader
+INFO 2023-12-26 19:04:11,143 basehttp 3508 3800 "GET /shop/orders/ HTTP/1.1" 200 5085
+WARNING 2023-12-26 19:04:11,222 log 3508 3800 Not Found: /favicon.ico
+WARNING 2023-12-26 19:04:11,222 basehttp 3508 3800 "GET /favicon.ico HTTP/1.1" 404 4592
+WARNING 2023-12-26 19:04:21,630 log 3508 3800 Not Found: /_debug_
+WARNING 2023-12-26 19:04:21,630 basehttp 3508 3800 "GET /_debug_ HTTP/1.1" 404 5799
+INFO 2023-12-26 19:06:55,230 autoreload 3508 17356 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-26 19:06:55,605 autoreload 13240 7932 Watching for file changes with StatReloader
+WARNING 2023-12-26 19:07:00,247 log 13240 7032 Not Found: /_debug_
+WARNING 2023-12-26 19:07:00,247 basehttp 13240 7032 "GET /_debug_ HTTP/1.1" 404 5799
+INFO 2023-12-26 19:10:16,357 autoreload 13240 7932 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:10:16,762 autoreload 14776 6908 Watching for file changes with StatReloader
+INFO 2023-12-26 19:10:29,506 autoreload 14776 6908 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:10:29,881 autoreload 22760 20044 Watching for file changes with StatReloader
+INFO 2023-12-26 19:10:36,336 autoreload 22760 20044 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:10:36,723 autoreload 14684 7544 Watching for file changes with StatReloader
+INFO 2023-12-26 19:11:58,775 autoreload 14684 7544 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:13:25,754 autoreload 26140 23516 Watching for file changes with StatReloader
+INFO 2023-12-26 19:13:46,566 autoreload 26140 23516 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:13:46,984 autoreload 11664 9064 Watching for file changes with StatReloader
+INFO 2023-12-26 19:14:13,971 autoreload 11664 9064 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:14:14,359 autoreload 16624 11580 Watching for file changes with StatReloader
+INFO 2023-12-26 19:14:17,733 autoreload 16624 11580 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:14:18,123 autoreload 18188 8352 Watching for file changes with StatReloader
+WARNING 2023-12-26 19:14:23,004 log 18188 24416 Not Found: /_debug_
+WARNING 2023-12-26 19:14:23,004 basehttp 18188 24416 "GET /_debug_ HTTP/1.1" 404 14752
+INFO 2023-12-26 19:14:23,013 basehttp 18188 11796 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2023-12-26 19:14:23,014 basehttp 18188 24276 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2023-12-26 19:14:23,014 basehttp 18188 24416 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2023-12-26 19:14:23,018 basehttp 18188 24416 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+INFO 2023-12-26 19:14:54,446 autoreload 18188 8352 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:14:54,852 autoreload 2872 13056 Watching for file changes with StatReloader
+INFO 2023-12-26 19:15:53,590 autoreload 2872 13056 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-26 19:15:53,987 autoreload 23356 9860 Watching for file changes with StatReloader
+WARNING 2023-12-26 19:16:06,835 log 23356 8956 Not Found: /__debug__
+WARNING 2023-12-26 19:16:06,835 basehttp 23356 8956 "GET /__debug__ HTTP/1.1" 404 14778
+INFO 2023-12-26 19:16:06,844 basehttp 23356 8956 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2023-12-26 19:16:06,844 basehttp 23356 22908 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2023-12-26 19:16:06,844 basehttp 23356 22820 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2023-12-26 19:16:06,848 basehttp 23356 22820 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2023-12-26 19:16:25,185 autoreload 23356 9860 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-26 19:16:25,572 autoreload 14492 19984 Watching for file changes with StatReloader
+WARNING 2023-12-26 19:16:29,843 log 14492 17992 Not Found: /__debug__
+WARNING 2023-12-26 19:16:29,843 basehttp 14492 17992 "GET /__debug__ HTTP/1.1" 404 13550
+INFO 2023-12-26 19:16:57,011 basehttp 14492 17992 "GET / HTTP/1.1" 200 12613
+INFO 2023-12-26 19:17:16,361 autoreload 14492 19984 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:17:16,802 autoreload 25896 23092 Watching for file changes with StatReloader
+INFO 2023-12-26 19:17:19,740 basehttp 25896 12376 "GET / HTTP/1.1" 200 13410
+INFO 2023-12-26 19:18:07,701 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=SettingsPanel HTTP/1.1" 200 27349
+INFO 2023-12-26 19:18:42,113 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=HeadersPanel HTTP/1.1" 200 5426
+INFO 2023-12-26 19:18:48,638 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=RequestPanel HTTP/1.1" 200 2316
+INFO 2023-12-26 19:19:20,791 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=SQLPanel HTTP/1.1" 200 26140
+INFO 2023-12-26 19:20:03,828 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=StaticFilesPanel HTTP/1.1" 200 32068
+INFO 2023-12-26 19:20:42,194 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=TemplatesPanel HTTP/1.1" 200 5877
+INFO 2023-12-26 19:20:55,096 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=SignalsPanel HTTP/1.1" 200 2231
+INFO 2023-12-26 19:29:02,142 autoreload 25896 23092 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:29:02,547 autoreload 9492 6404 Watching for file changes with StatReloader
+INFO 2023-12-26 19:29:30,527 autoreload 9492 6404 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:29:30,932 autoreload 13496 24324 Watching for file changes with StatReloader
+INFO 2023-12-26 19:30:12,265 autoreload 13496 24324 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:30:12,663 autoreload 16892 17152 Watching for file changes with StatReloader
+INFO 2023-12-26 19:30:50,888 autoreload 16892 17152 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
