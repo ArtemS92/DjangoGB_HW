@@ -1,0 +1,1064 @@
+INFO 2023-12-11 17:38:10,261 autoreload 952 17616 Watching for file changes with StatReloader
+INFO 2023-12-11 17:38:44,328 autoreload 26484 19384 Watching for file changes with StatReloader
+WARNING 2023-12-11 17:38:45,833 log 26484 2540 Not Found: /
+WARNING 2023-12-11 17:38:45,834 basehttp 26484 2540 "GET / HTTP/1.1" 404 2507
+WARNING 2023-12-11 17:39:02,153 log 26484 2540 Not Found: /abot_me
+WARNING 2023-12-11 17:39:02,154 basehttp 26484 2540 "GET /abot_me HTTP/1.1" 404 2546
+INFO 2023-12-11 17:39:07,403 basehttp 26484 2540 "GET /about_me HTTP/1.1" 301 0
+INFO 2023-12-11 17:39:07,404 views 26484 2784 Страница "О себе" успешно открыта
+ERROR 2023-12-11 17:39:07,492 log 26484 2784 Internal Server Error: /about_me/
+Traceback (most recent call last):
+  File "D:\GB Django\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: shop_app/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\GB Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\myproject\hw1_aboutmeapp\views.py", line 38, in about_me
+    return render(request, 'about_me.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "D:\GB Django\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: shop_app/base.html
+ERROR 2023-12-11 17:39:07,495 basehttp 26484 2784 "GET /about_me/ HTTP/1.1" 500 130617
+INFO 2023-12-11 17:41:20,508 autoreload 3792 14260 Watching for file changes with StatReloader
+WARNING 2023-12-11 17:41:21,333 log 3792 24100 Not Found: /
+WARNING 2023-12-11 17:41:21,334 basehttp 3792 24100 "GET / HTTP/1.1" 404 2507
+INFO 2023-12-11 17:41:31,699 views 3792 24100 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:41:31,702 basehttp 3792 24100 "GET /about_me/ HTTP/1.1" 200 123
+INFO 2023-12-11 17:42:19,691 views 3792 24100 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:42:19,692 basehttp 3792 24100 "GET /about_me/ HTTP/1.1" 200 6007
+INFO 2023-12-11 17:42:27,216 views 3792 24100 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:42:27,217 basehttp 3792 24100 "GET /about_me/ HTTP/1.1" 200 6007
+INFO 2023-12-11 17:42:29,920 basehttp 3792 24100 "GET /admin HTTP/1.1" 301 0
+INFO 2023-12-11 17:42:29,934 basehttp 3792 360 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-12-11 17:42:29,995 basehttp 3792 360 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+INFO 2023-12-11 17:42:30,061 basehttp 3792 360 "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2023-12-11 17:42:30,072 basehttp 3792 360 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2023-12-11 17:42:30,077 basehttp 3792 7300 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2023-12-11 17:42:30,097 basehttp 3792 14056 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2023-12-11 17:42:30,126 basehttp 3792 24676 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2023-12-11 17:42:30,141 basehttp 3792 25720 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2023-12-11 17:42:30,141 basehttp 3792 5496 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+WARNING 2023-12-11 17:42:34,464 log 3792 5496 Not Found: /shop/products
+WARNING 2023-12-11 17:42:34,464 basehttp 3792 5496 "GET /shop/products HTTP/1.1" 404 2564
+INFO 2023-12-11 17:43:37,393 views 3792 5496 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:43:37,394 basehttp 3792 5496 "GET /about_me/ HTTP/1.1" 200 6007
+INFO 2023-12-11 17:43:38,842 views 3792 5496 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:43:38,842 basehttp 3792 5496 "GET /about_me/ HTTP/1.1" 200 6007
+WARNING 2023-12-11 17:43:45,328 log 3792 5496 Not Found: /shop/choice_product_id_form
+WARNING 2023-12-11 17:43:45,328 basehttp 3792 5496 "GET /shop/choice_product_id_form HTTP/1.1" 404 2606
+INFO 2023-12-11 17:55:01,123 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:55:01,124 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3733
+WARNING 2023-12-11 17:55:01,133 log 3792 11020 Not Found: /assets/images/7578353-vdt.jpg
+WARNING 2023-12-11 17:55:01,134 basehttp 3792 11020 "GET /assets/images/7578353-vdt.jpg HTTP/1.1" 404 2612
+INFO 2023-12-11 17:56:12,677 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:56:12,685 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:56:12,696 log 3792 11020 Not Found: /assets/images/i.webp
+WARNING 2023-12-11 17:56:12,696 basehttp 3792 11020 "GET /assets/images/i.webp HTTP/1.1" 404 2585
+INFO 2023-12-11 17:56:13,381 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:56:13,382 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:56:13,392 log 3792 11020 Not Found: /assets/images/i.webp
+WARNING 2023-12-11 17:56:13,392 basehttp 3792 11020 "GET /assets/images/i.webp HTTP/1.1" 404 2585
+INFO 2023-12-11 17:57:27,604 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:57:27,605 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:57:27,616 log 3792 11020 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:57:27,616 basehttp 3792 11020 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 17:57:28,730 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:57:28,731 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:57:28,743 log 3792 11020 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:57:28,743 basehttp 3792 11020 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 17:57:43,283 autoreload 8596 12672 Watching for file changes with StatReloader
+WARNING 2023-12-11 17:57:44,555 log 8596 9140 Not Found: /
+WARNING 2023-12-11 17:57:44,556 basehttp 8596 9140 "GET / HTTP/1.1" 404 2507
+INFO 2023-12-11 17:57:59,041 views 8596 9140 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:57:59,053 basehttp 8596 9140 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:57:59,065 log 8596 9140 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:57:59,065 basehttp 8596 9140 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+WARNING 2023-12-11 17:58:02,031 log 8596 9140 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:58:02,031 basehttp 8596 9140 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 17:58:54,236 views 8596 9140 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:58:54,237 basehttp 8596 9140 "GET /about_me/ HTTP/1.1" 200 3735
+WARNING 2023-12-11 17:58:54,249 log 8596 9140 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:58:54,249 basehttp 8596 9140 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 18:02:21,787 views 8596 9140 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:02:21,788 basehttp 8596 9140 "GET /about_me/ HTTP/1.1" 200 3828
+INFO 2023-12-11 18:08:21,136 views 8596 14928 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:08:21,137 basehttp 8596 14928 "GET /about_me/ HTTP/1.1" 200 3905
+WARNING 2023-12-11 18:08:21,148 log 8596 14928 Not Found: /myproject/hw1_aboutmeapp/assets/images/VD.png
+WARNING 2023-12-11 18:08:21,148 basehttp 8596 14928 "GET /myproject/hw1_aboutmeapp/assets/images/VD.png HTTP/1.1" 404 2660
+INFO 2023-12-11 18:09:39,103 views 8596 14928 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:09:39,104 basehttp 8596 14928 "GET /about_me/ HTTP/1.1" 200 3882
+WARNING 2023-12-11 18:09:39,116 log 8596 14928 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 18:09:39,116 basehttp 8596 14928 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 18:10:58,953 autoreload 8596 12672 D:\GB Django\myproject\hw1_aboutmeapp\urls.py changed, reloading.
+INFO 2023-12-11 18:10:59,316 autoreload 17208 4872 Watching for file changes with StatReloader
+INFO 2023-12-11 18:11:00,050 views 17208 21192 Страница "Главная" успешно открыта
+INFO 2023-12-11 18:11:00,051 basehttp 17208 21192 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-11 18:11:04,476 views 17208 21192 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:11:04,479 basehttp 17208 21192 "GET /about_me/? HTTP/1.1" 200 3829
+INFO 2023-12-11 18:19:06,842 autoreload 7700 23120 Watching for file changes with StatReloader
+INFO 2023-12-11 18:19:07,633 views 7700 3124 Страница "Главная" успешно открыта
+INFO 2023-12-11 18:19:07,634 basehttp 7700 3124 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-11 18:19:14,161 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:19:14,164 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 4155
+INFO 2023-12-11 18:21:30,307 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:21:30,308 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 4396
+INFO 2023-12-11 18:21:47,866 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:21:47,867 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 4398
+INFO 2023-12-11 18:23:48,402 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:23:48,403 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-11 18:23:49,635 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:23:49,636 basehttp 7700 3124 "GET /about_me/ HTTP/1.1" 200 2773
+INFO 2023-12-11 18:23:50,275 views 7700 3124 Страница "Главная" успешно открыта
+INFO 2023-12-11 18:23:50,276 basehttp 7700 3124 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-11 18:23:51,936 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:23:51,936 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-11 18:25:37,204 autoreload 8712 3284 Watching for file changes with StatReloader
+INFO 2023-12-11 18:25:37,955 views 8712 13384 Страница "Главная" успешно открыта
+INFO 2023-12-11 18:25:37,956 basehttp 8712 13384 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-11 18:25:39,414 views 8712 13384 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:25:39,417 basehttp 8712 13384 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-13 20:14:19,134 autoreload 2540 13888 Watching for file changes with StatReloader
+INFO 2023-12-13 20:51:02,893 autoreload 4536 19396 Watching for file changes with StatReloader
+INFO 2023-12-13 20:51:05,911 views 4536 12208 Страница "Главная" успешно открыта
+INFO 2023-12-13 20:51:05,911 basehttp 4536 12208 "GET / HTTP/1.1" 200 1023
+WARNING 2023-12-13 20:51:05,946 log 4536 12208 Not Found: /favicon.ico
+WARNING 2023-12-13 20:51:05,947 basehttp 4536 12208 "GET /favicon.ico HTTP/1.1" 404 4918
+INFO 2023-12-13 20:51:07,501 views 4536 12208 Страница "О себе" успешно открыта
+INFO 2023-12-13 20:51:07,504 basehttp 4536 12208 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-13 20:51:08,806 basehttp 4536 12208 "GET /about_me HTTP/1.1" 301 0
+INFO 2023-12-13 20:51:08,807 views 4536 11380 Страница "О себе" успешно открыта
+INFO 2023-12-13 20:51:08,808 basehttp 4536 11380 "GET /about_me/ HTTP/1.1" 200 2773
+INFO 2023-12-13 20:51:10,001 views 4536 11380 Страница "Главная" успешно открыта
+INFO 2023-12-13 20:51:10,002 basehttp 4536 11380 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 20:54:43,256 autoreload 21084 10824 Watching for file changes with StatReloader
+INFO 2023-12-13 20:58:39,948 views 21084 19136 Страница "О себе" успешно открыта
+INFO 2023-12-13 20:58:39,951 basehttp 21084 19136 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-13 20:58:41,978 views 21084 19136 Страница "О себе" успешно открыта
+INFO 2023-12-13 20:58:41,978 basehttp 21084 19136 "GET /about_me/ HTTP/1.1" 200 2773
+INFO 2023-12-13 20:58:42,582 views 21084 19136 Страница "Главная" успешно открыта
+INFO 2023-12-13 20:58:42,583 basehttp 21084 19136 "GET / HTTP/1.1" 200 1023
+WARNING 2023-12-13 20:59:08,082 log 21084 19136 Not Found: /shop
+WARNING 2023-12-13 20:59:08,083 basehttp 21084 19136 "GET /shop HTTP/1.1" 404 4897
+WARNING 2023-12-13 20:59:30,611 log 21084 19136 Not Found: /main
+WARNING 2023-12-13 20:59:30,611 basehttp 21084 19136 "GET /main HTTP/1.1" 404 4897
+INFO 2023-12-13 20:59:39,666 basehttp 21084 19136 "GET /prefix HTTP/1.1" 301 0
+INFO 2023-12-13 20:59:39,667 basehttp 21084 5336 "GET /prefix/ HTTP/1.1" 200 13
+INFO 2023-12-13 20:59:45,272 views 21084 5336 Страница "Главная" успешно открыта
+INFO 2023-12-13 20:59:45,273 basehttp 21084 5336 "GET // HTTP/1.1" 200 1023
+INFO 2023-12-13 21:00:07,138 autoreload 21084 10824 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:00:07,500 autoreload 16684 10904 Watching for file changes with StatReloader
+WARNING 2023-12-13 21:00:13,330 log 16684 16528 Not Found: /shop
+WARNING 2023-12-13 21:00:13,330 basehttp 16684 16528 "GET /shop HTTP/1.1" 404 2637
+WARNING 2023-12-13 21:02:14,542 log 16684 16528 Not Found: /shop
+WARNING 2023-12-13 21:02:14,543 basehttp 16684 16528 "GET /shop HTTP/1.1" 404 2637
+WARNING 2023-12-13 21:02:16,865 log 16684 16528 Not Found: /shop
+WARNING 2023-12-13 21:02:16,866 basehttp 16684 16528 "GET /shop HTTP/1.1" 404 2637
+INFO 2023-12-13 21:02:26,743 views 16684 16528 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:02:26,743 basehttp 16684 16528 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:02:28,247 views 16684 16528 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:02:28,250 basehttp 16684 16528 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-13 21:02:52,154 views 16684 16528 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:02:52,156 basehttp 16684 16528 "GET /about_me/? HTTP/1.1" 200 4362
+WARNING 2023-12-13 21:02:54,336 log 16684 16528 Not Found: /shop/products
+WARNING 2023-12-13 21:02:54,336 basehttp 16684 16528 "GET /shop/products HTTP/1.1" 404 2664
+INFO 2023-12-13 21:08:52,643 autoreload 16684 10904 D:\GB Django\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-13 21:08:53,007 autoreload 24656 21620 Watching for file changes with StatReloader
+INFO 2023-12-13 21:08:57,854 autoreload 22608 9144 Watching for file changes with StatReloader
+INFO 2023-12-13 21:08:59,308 views 22608 14260 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:08:59,308 basehttp 22608 14260 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:09:00,677 views 22608 14260 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:09:00,681 basehttp 22608 14260 "GET /about_me/? HTTP/1.1" 200 4362
+WARNING 2023-12-13 21:09:02,678 log 22608 14260 Not Found: /shop/products
+WARNING 2023-12-13 21:09:02,679 basehttp 22608 14260 "GET /shop/products HTTP/1.1" 404 2664
+INFO 2023-12-13 21:16:07,714 autoreload 13400 1852 Watching for file changes with StatReloader
+INFO 2023-12-13 21:22:39,890 autoreload 22608 9144 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:22:40,260 autoreload 4132 17584 Watching for file changes with StatReloader
+INFO 2023-12-13 21:22:45,717 autoreload 10676 21452 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:21,347 autoreload 4132 17584 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:23:21,691 autoreload 10676 21452 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:23:21,719 autoreload 6836 26548 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:25,787 autoreload 1472 19208 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:37,243 autoreload 1472 19208 D:\GB Django\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-13 21:23:37,243 autoreload 6836 26548 D:\GB Django\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-13 21:23:37,632 autoreload 19164 9644 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:37,632 autoreload 16728 16196 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:41,751 views 16728 6780 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:23:41,752 basehttp 16728 6780 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:23:43,512 views 16728 6780 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:23:43,515 basehttp 16728 6780 "GET /about_me/? HTTP/1.1" 200 4362
+WARNING 2023-12-13 21:23:44,705 log 16728 6780 Not Found: /shop/clients
+WARNING 2023-12-13 21:23:44,705 basehttp 16728 6780 "GET /shop/clients HTTP/1.1" 404 4981
+INFO 2023-12-13 21:26:17,536 autoreload 16728 16196 D:\GB Django\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-13 21:26:17,898 autoreload 2132 21016 Watching for file changes with StatReloader
+INFO 2023-12-13 21:26:18,240 autoreload 19164 9644 D:\GB Django\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-13 21:26:18,602 autoreload 15164 10052 Watching for file changes with StatReloader
+INFO 2023-12-13 21:26:19,714 views 2132 23428 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:26:19,714 basehttp 2132 23428 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:26:21,038 views 2132 23428 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:26:21,041 basehttp 2132 23428 "GET /about_me/? HTTP/1.1" 200 4362
+WARNING 2023-12-13 21:26:22,587 log 2132 23428 Not Found: /shop/products
+WARNING 2023-12-13 21:26:22,588 basehttp 2132 23428 "GET /shop/products HTTP/1.1" 404 4984
+INFO 2023-12-13 21:32:19,165 autoreload 15164 10052 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:32:19,541 autoreload 11840 11884 Watching for file changes with StatReloader
+INFO 2023-12-13 21:32:19,881 autoreload 2132 21016 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:32:20,247 autoreload 18960 6932 Watching for file changes with StatReloader
+INFO 2023-12-13 21:32:21,601 views 11840 25376 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:32:21,602 basehttp 11840 25376 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:32:22,583 views 11840 25376 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:32:22,586 basehttp 11840 25376 "GET /about_me/? HTTP/1.1" 200 4362
+INFO 2023-12-13 21:32:24,142 basehttp 11840 25376 "GET /shop/products HTTP/1.1" 301 0
+INFO 2023-12-13 21:32:24,144 views 11840 17144 Страница "Список продуктов" успешно открыта
+INFO 2023-12-13 21:32:24,149 basehttp 11840 17144 "GET /shop/products/ HTTP/1.1" 200 4504
+INFO 2023-12-13 21:32:25,987 basehttp 11840 17144 "GET /shop/clients HTTP/1.1" 301 0
+INFO 2023-12-13 21:32:25,989 views 11840 2736 Страница "Список клиентов" успешно открыта
+INFO 2023-12-13 21:32:25,991 basehttp 11840 2736 "GET /shop/clients/ HTTP/1.1" 200 4654
+INFO 2023-12-13 21:32:28,012 views 11840 2736 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:32:28,012 basehttp 11840 2736 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-13 21:32:28,883 basehttp 11840 2736 "GET /admin HTTP/1.1" 301 0
+INFO 2023-12-13 21:32:28,891 basehttp 11840 16412 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-12-13 21:32:28,911 basehttp 11840 16412 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+INFO 2023-12-13 21:32:28,973 basehttp 11840 16412 "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2023-12-13 21:32:28,975 basehttp 11840 16412 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2023-12-13 21:32:28,989 basehttp 11840 17144 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2023-12-13 21:32:29,032 basehttp 11840 25376 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2023-12-13 21:32:29,040 basehttp 11840 24052 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2023-12-13 21:32:29,053 basehttp 11840 5984 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2023-12-13 21:32:29,056 basehttp 11840 24648 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2023-12-13 21:32:34,863 views 11840 24648 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:32:34,863 basehttp 11840 24648 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:33:28,716 autoreload 11840 11884 D:\GB Django\myproject\hw1_aboutmeapp\urls.py changed, reloading.
+INFO 2023-12-13 21:33:28,889 autoreload 18960 6932 D:\GB Django\myproject\hw1_aboutmeapp\urls.py changed, reloading.
+INFO 2023-12-13 21:33:29,092 autoreload 10956 16940 Watching for file changes with StatReloader
+INFO 2023-12-13 21:33:29,255 autoreload 8156 19776 Watching for file changes with StatReloader
+INFO 2023-12-13 21:33:30,787 basehttp 10956 15080 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-13 21:34:01,513 views 10956 15080 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:34:01,515 basehttp 10956 15080 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-13 21:34:03,397 basehttp 10956 15080 "GET /shop/orders HTTP/1.1" 301 0
+INFO 2023-12-13 21:34:03,405 basehttp 10956 25128 "GET /shop/orders/ HTTP/1.1" 200 5019
+INFO 2023-12-13 21:36:50,212 autoreload 5996 12480 Watching for file changes with StatReloader
+INFO 2023-12-13 21:36:51,335 basehttp 5996 3008 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-13 21:36:54,198 views 5996 3008 Страница "Список продуктов" успешно открыта
+INFO 2023-12-13 21:36:54,203 basehttp 5996 3008 "GET /shop/products/ HTTP/1.1" 200 4990
+INFO 2023-12-13 21:37:08,227 basehttp 5996 3008 "GET /shop/choice_products_by_client_by_days HTTP/1.1" 301 0
+INFO 2023-12-13 21:37:08,234 basehttp 5996 14228 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-13 21:37:11,824 basehttp 5996 14228 "POST /shop/choice_products_by_client_by_days/ HTTP/1.1" 302 0
+INFO 2023-12-13 21:37:11,828 basehttp 5996 14228 "GET /shop/client_products_sorted/1/1/ HTTP/1.1" 200 3660
+INFO 2023-12-13 21:37:15,840 basehttp 5996 14228 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-13 21:37:20,565 basehttp 5996 14228 "POST /shop/choice_products_by_client_by_days/ HTTP/1.1" 302 0
+INFO 2023-12-13 21:37:20,568 basehttp 5996 14228 "GET /shop/client_products_sorted/2/45/ HTTP/1.1" 200 3674
+INFO 2023-12-18 16:10:04,123 autoreload 17484 17660 Watching for file changes with StatReloader
+WARNING 2023-12-18 16:10:05,787 log 17484 23568 Not Found: /
+WARNING 2023-12-18 16:10:05,787 basehttp 17484 23568 "GET / HTTP/1.1" 404 2507
+WARNING 2023-12-18 16:10:05,816 log 17484 23568 Not Found: /favicon.ico
+WARNING 2023-12-18 16:10:05,817 basehttp 17484 23568 "GET /favicon.ico HTTP/1.1" 404 2558
+INFO 2023-12-18 16:27:43,289 autoreload 23288 6908 Watching for file changes with StatReloader
+INFO 2023-12-18 16:27:45,083 basehttp 23288 23440 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-18 16:27:46,845 basehttp 23288 23440 "GET /shop/clients HTTP/1.1" 301 0
+INFO 2023-12-18 16:27:46,846 views 23288 1428 Страница "Список клиентов" успешно открыта
+INFO 2023-12-18 16:27:46,850 basehttp 23288 1428 "GET /shop/clients/ HTTP/1.1" 200 4654
+INFO 2023-12-18 16:27:48,858 basehttp 23288 1428 "GET /shop/products HTTP/1.1" 301 0
+INFO 2023-12-18 16:27:48,859 views 23288 17252 Страница "Список продуктов" успешно открыта
+INFO 2023-12-18 16:27:48,862 basehttp 23288 17252 "GET /shop/products/ HTTP/1.1" 200 4990
+INFO 2023-12-18 16:27:50,635 basehttp 23288 17252 "GET /about_me HTTP/1.1" 301 0
+INFO 2023-12-18 16:27:50,636 views 23288 13816 Страница "О себе" успешно открыта
+INFO 2023-12-18 16:27:50,637 basehttp 23288 13816 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-18 16:27:52,979 basehttp 23288 13816 "GET /admin HTTP/1.1" 301 0
+INFO 2023-12-18 16:27:52,987 basehttp 23288 5936 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-12-18 16:27:53,008 basehttp 23288 5936 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+INFO 2023-12-18 16:27:53,068 basehttp 23288 5936 "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2023-12-18 16:27:53,070 basehttp 23288 5936 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2023-12-18 16:27:53,085 basehttp 23288 24388 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2023-12-18 16:27:53,120 basehttp 23288 2408 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2023-12-18 16:27:53,126 basehttp 23288 4176 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2023-12-18 16:27:53,134 basehttp 23288 5436 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2023-12-18 16:27:53,146 basehttp 23288 22452 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2023-12-18 16:27:54,654 basehttp 23288 22452 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-18 16:28:25,505 basehttp 23288 22452 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-12-18 16:28:25,508 basehttp 23288 22452 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+INFO 2023-12-18 16:28:33,540 basehttp 23288 22452 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4315
+INFO 2023-12-18 16:43:25,936 basehttp 23288 20100 "GET /shop/orders/ HTTP/1.1" 200 5019
+INFO 2023-12-18 16:43:28,257 basehttp 23288 20100 "GET /shop/orders/ HTTP/1.1" 200 5019
+INFO 2023-12-18 17:14:02,898 autoreload 17264 19776 Watching for file changes with StatReloader
+INFO 2023-12-18 17:14:06,437 basehttp 17264 8228 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-18 17:14:27,695 basehttp 17264 8228 "GET /shop/choice_product_id_form HTTP/1.1" 301 0
+INFO 2023-12-18 17:14:27,701 basehttp 17264 8872 "GET /shop/choice_product_id_form/ HTTP/1.1" 200 4009
+INFO 2023-12-18 17:14:30,571 basehttp 17264 8872 "POST /shop/choice_product_id_form/ HTTP/1.1" 302 0
+INFO 2023-12-18 17:14:30,577 basehttp 17264 8872 "GET /shop/product_form/1 HTTP/1.1" 200 4800
+INFO 2023-12-18 17:15:58,166 views 17264 8872 Product Тарелка is changed successfully
+INFO 2023-12-18 17:15:58,167 basehttp 17264 8872 "POST /shop/product_form/1 HTTP/1.1" 302 0
+INFO 2023-12-18 17:15:58,170 basehttp 17264 8872 "GET /shop/product/1 HTTP/1.1" 200 3780
+INFO 2023-12-25 13:33:44,768 autoreload 9160 18608 Watching for file changes with StatReloader
+INFO 2023-12-25 13:33:51,704 basehttp 9160 19996 "GET /about_me HTTP/1.1" 301 0
+INFO 2023-12-25 13:33:51,706 views 9160 18648 Страница "О себе" успешно открыта
+INFO 2023-12-25 13:33:51,710 basehttp 9160 18648 "GET /about_me/ HTTP/1.1" 200 4362
+WARNING 2023-12-25 13:33:52,056 log 9160 18648 Not Found: /favicon.ico
+WARNING 2023-12-25 13:33:52,056 basehttp 9160 18648 "GET /favicon.ico HTTP/1.1" 404 4923
+INFO 2023-12-25 13:33:52,800 basehttp 9160 18648 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-25 13:33:53,874 basehttp 9160 18648 "GET /admin HTTP/1.1" 301 0
+INFO 2023-12-25 13:33:53,884 basehttp 9160 14628 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-12-25 13:33:53,915 basehttp 9160 14628 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+INFO 2023-12-25 13:33:54,025 basehttp 9160 14628 "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2023-12-25 13:33:54,027 basehttp 9160 14628 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2023-12-25 13:33:54,041 basehttp 9160 26272 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2023-12-25 13:33:54,049 basehttp 9160 18556 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2023-12-25 13:33:54,052 basehttp 9160 19580 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2023-12-25 13:33:54,064 basehttp 9160 22368 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2023-12-25 13:33:54,067 basehttp 9160 6656 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2023-12-25 13:34:00,484 basehttp 9160 6656 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4319
+INFO 2023-12-25 13:34:08,695 basehttp 9160 6656 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4319
+INFO 2023-12-25 13:39:16,066 autoreload 9160 18608 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-25 13:39:16,440 autoreload 11048 21640 Watching for file changes with StatReloader
+INFO 2023-12-25 13:39:26,198 basehttp 11048 10884 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4626
+INFO 2023-12-25 13:48:14,151 autoreload 12772 6464 Watching for file changes with StatReloader
+INFO 2023-12-25 13:48:21,310 basehttp 12772 3512 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2023-12-25 13:48:21,338 basehttp 12772 3512 "GET /admin/ HTTP/1.1" 200 7590
+INFO 2023-12-25 13:48:21,395 basehttp 12772 20688 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2023-12-25 13:48:21,434 basehttp 12772 18176 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2023-12-25 13:48:21,443 basehttp 12772 1760 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2023-12-25 13:48:21,447 basehttp 12772 3512 "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2023-12-25 13:48:21,457 basehttp 12772 15608 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2023-12-25 13:48:21,462 basehttp 12772 3512 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2023-12-25 13:48:21,462 basehttp 12772 15608 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2023-12-25 14:03:17,721 basehttp 12772 8628 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-25 14:03:20,082 basehttp 12772 8628 "GET /admin/ HTTP/1.1" 200 7590
+INFO 2023-12-25 14:03:20,093 basehttp 12772 10044 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2023-12-25 14:03:20,093 basehttp 12772 21340 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2023-12-25 14:03:20,093 basehttp 12772 8628 "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2023-12-25 14:03:20,093 basehttp 12772 16972 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2023-12-25 14:03:20,094 basehttp 12772 17472 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2023-12-25 14:05:56,577 basehttp 12772 17472 "GET /admin/auth/user/ HTTP/1.1" 200 13127
+INFO 2023-12-25 14:05:56,592 basehttp 12772 17472 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6811
+INFO 2023-12-25 14:05:56,592 basehttp 12772 8628 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2023-12-25 14:05:56,592 basehttp 12772 10044 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2023-12-25 14:05:56,594 basehttp 12772 7304 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2023-12-25 14:05:56,595 basehttp 12772 17472 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2023-12-25 14:05:56,596 basehttp 12772 8628 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2023-12-25 14:05:56,598 basehttp 12772 10044 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2023-12-25 14:05:56,599 basehttp 12772 16972 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2023-12-25 14:05:56,599 basehttp 12772 17472 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2023-12-25 14:05:56,600 basehttp 12772 10044 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2023-12-25 14:05:56,600 basehttp 12772 21340 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2023-12-25 14:05:56,601 basehttp 12772 7304 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2023-12-25 14:05:56,605 basehttp 12772 7304 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2023-12-25 14:05:56,618 basehttp 12772 7304 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2023-12-25 14:05:56,618 basehttp 12772 21340 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2023-12-25 14:05:56,619 basehttp 12772 10044 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2023-12-25 14:10:07,376 autoreload 12772 6464 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\admin.py changed, reloading.
+INFO 2023-12-25 14:10:07,828 autoreload 12712 9400 Watching for file changes with StatReloader
+INFO 2023-12-25 14:10:10,976 basehttp 12712 5116 "GET /admin/hw2_shop_app/client/ HTTP/1.1" 200 15158
+INFO 2023-12-25 14:10:10,989 basehttp 12712 1048 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2023-12-25 14:10:11,019 basehttp 12712 5116 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6811
+INFO 2023-12-25 14:10:17,967 basehttp 12712 5116 "GET /admin/hw2_shop_app/order/ HTTP/1.1" 200 15050
+INFO 2023-12-25 14:10:17,980 basehttp 12712 5116 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2023-12-25 14:10:17,981 basehttp 12712 1048 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2023-12-25 14:10:22,748 basehttp 12712 1048 "POST /admin/hw2_shop_app/order/ HTTP/1.1" 302 0
+INFO 2023-12-25 14:10:22,758 basehttp 12712 1048 "GET /admin/hw2_shop_app/order/ HTTP/1.1" 200 15050
+INFO 2023-12-25 14:10:22,769 basehttp 12712 1048 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2023-12-25 14:10:27,590 basehttp 12712 1048 "GET /admin/hw2_shop_app/client/ HTTP/1.1" 200 15158
+INFO 2023-12-25 14:10:27,604 basehttp 12712 1048 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2023-12-25 14:10:29,751 basehttp 12712 1048 "GET /admin/hw2_shop_app/product/ HTTP/1.1" 200 15789
+INFO 2023-12-25 14:10:29,761 basehttp 12712 1048 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2023-12-25 14:14:27,590 autoreload 12712 9400 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\admin.py changed, reloading.
+INFO 2023-12-25 14:14:27,963 autoreload 19264 15012 Watching for file changes with StatReloader
+INFO 2023-12-25 14:14:50,353 basehttp 19264 23256 "GET /admin/hw2_shop_app/product/?date_add_product__gte=2023-12-18&date_add_product__lt=2023-12-26 HTTP/1.1" 200 12404
+INFO 2023-12-25 14:14:50,365 basehttp 19264 23256 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2023-12-25 14:14:54,318 basehttp 19264 23256 "GET /admin/hw2_shop_app/product/?date_add_product__gte=2023-12-01&date_add_product__lt=2024-01-01 HTTP/1.1" 200 17842
+INFO 2023-12-25 14:14:54,332 basehttp 19264 23256 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2023-12-25 14:14:55,754 basehttp 19264 23256 "GET /admin/hw2_shop_app/product/?date_add_product__gte=2023-01-01&date_add_product__lt=2024-01-01 HTTP/1.1" 200 17842
+INFO 2023-12-25 14:14:55,766 basehttp 19264 23256 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2023-12-25 14:15:01,748 basehttp 19264 23256 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-25 14:15:05,009 basehttp 19264 23256 "GET /shop/orders HTTP/1.1" 301 0
+INFO 2023-12-25 14:15:05,017 basehttp 19264 8300 "GET /shop/orders/ HTTP/1.1" 200 5089
+INFO 2023-12-25 14:15:06,366 basehttp 19264 8300 "GET /shop/choice_products_by_client_by_days HTTP/1.1" 301 0
+INFO 2023-12-25 14:15:06,372 basehttp 19264 14300 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-25 14:15:14,581 basehttp 19264 14300 "POST /shop/choice_products_by_client_by_days/ HTTP/1.1" 302 0
+INFO 2023-12-25 14:15:14,586 basehttp 19264 14300 "GET /shop/client_products_sorted/4/7/ HTTP/1.1" 200 3660
+INFO 2023-12-25 14:16:28,737 autoreload 19264 15012 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\admin.py changed, reloading.
+INFO 2023-12-25 14:16:29,122 autoreload 12772 6464 Watching for file changes with StatReloader
+INFO 2023-12-25 14:18:08,325 autoreload 12772 6464 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:18:08,695 autoreload 23448 5688 Watching for file changes with StatReloader
+INFO 2023-12-25 14:18:24,256 autoreload 23448 5688 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:18:24,616 autoreload 26044 2172 Watching for file changes with StatReloader
+INFO 2023-12-25 14:24:54,383 autoreload 26044 2172 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:24:54,752 autoreload 24584 20472 Watching for file changes with StatReloader
+INFO 2023-12-25 14:26:24,481 autoreload 24584 20472 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:26:24,840 autoreload 6304 11148 Watching for file changes with StatReloader
+INFO 2023-12-25 14:29:33,804 autoreload 6304 11148 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-25 14:29:34,168 autoreload 13608 16832 Watching for file changes with StatReloader
+INFO 2023-12-25 14:29:58,925 autoreload 13608 16832 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:29:59,280 autoreload 6164 17416 Watching for file changes with StatReloader
+INFO 2023-12-25 14:31:49,677 autoreload 6164 17416 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:31:50,029 autoreload 6116 22248 Watching for file changes with StatReloader
+INFO 2023-12-25 14:32:11,548 autoreload 6116 22248 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:32:11,898 autoreload 12164 15608 Watching for file changes with StatReloader
+INFO 2023-12-25 14:32:55,812 autoreload 12164 15608 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:32:56,177 autoreload 552 12556 Watching for file changes with StatReloader
+INFO 2023-12-25 14:33:21,764 autoreload 552 12556 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:33:22,127 autoreload 18360 5300 Watching for file changes with StatReloader
+INFO 2023-12-25 14:33:25,726 autoreload 9928 26084 Watching for file changes with StatReloader
+INFO 2023-12-25 14:35:15,224 autoreload 18360 5300 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\urls.py changed, reloading.
+INFO 2023-12-25 14:35:15,588 autoreload 1016 1316 Watching for file changes with StatReloader
+INFO 2023-12-25 14:35:15,994 autoreload 9928 26084 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\urls.py changed, reloading.
+INFO 2023-12-25 14:35:16,349 autoreload 20448 20024 Watching for file changes with StatReloader
+INFO 2023-12-25 14:37:09,685 autoreload 20448 20024 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\urls.py changed, reloading.
+INFO 2023-12-25 14:37:09,691 autoreload 1016 1316 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\urls.py changed, reloading.
+INFO 2023-12-25 14:37:10,061 autoreload 5448 4704 Watching for file changes with StatReloader
+INFO 2023-12-25 14:37:10,061 autoreload 8396 10176 Watching for file changes with StatReloader
+INFO 2023-12-25 14:37:16,366 basehttp 5448 2912 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-25 14:37:19,280 basehttp 5448 2912 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+ERROR 2023-12-25 14:37:24,149 log 5448 2912 Internal Server Error: /shop/choice_products_by_client_by_days/
+Traceback (most recent call last):
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py", line 172, in choice_products_by_client_by_days
+    return redirect("client_products_sorted", id_client, days)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\shortcuts.py", line 179, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'client_products_sorted' with arguments '('1', '2')' not found. 1 pattern(s) tried: ['shop/client_products_sorted/\\Z']
+ERROR 2023-12-25 14:37:24,152 basehttp 5448 2912 "POST /shop/choice_products_by_client_by_days/ HTTP/1.1" 500 91958
+ERROR 2023-12-25 14:37:28,335 log 5448 2912 Internal Server Error: /shop/choice_products_by_client_by_days/
+Traceback (most recent call last):
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py", line 172, in choice_products_by_client_by_days
+    return redirect("client_products_sorted", id_client, days)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\shortcuts.py", line 179, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\urls\resolvers.py", line 848, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'client_products_sorted' with arguments '('1', '7')' not found. 1 pattern(s) tried: ['shop/client_products_sorted/\\Z']
+ERROR 2023-12-25 14:37:28,336 basehttp 5448 2912 "POST /shop/choice_products_by_client_by_days/ HTTP/1.1" 500 91958
+INFO 2023-12-25 14:37:39,160 autoreload 5448 4704 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\urls.py changed, reloading.
+INFO 2023-12-25 14:37:39,528 autoreload 23816 4548 Watching for file changes with StatReloader
+INFO 2023-12-25 14:37:39,924 autoreload 8396 10176 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\urls.py changed, reloading.
+INFO 2023-12-25 14:37:40,279 autoreload 9756 24668 Watching for file changes with StatReloader
+INFO 2023-12-25 14:38:26,405 autoreload 9756 24668 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:38:26,476 autoreload 23816 4548 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:38:26,788 autoreload 20504 8892 Watching for file changes with StatReloader
+INFO 2023-12-25 14:38:26,850 autoreload 4564 13844 Watching for file changes with StatReloader
+INFO 2023-12-25 14:39:51,712 autoreload 20504 8892 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:39:51,718 autoreload 4564 13844 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:39:52,094 autoreload 22732 9604 Watching for file changes with StatReloader
+INFO 2023-12-25 14:39:52,095 autoreload 21176 20084 Watching for file changes with StatReloader
+INFO 2023-12-25 14:41:30,306 autoreload 21176 20084 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:41:30,307 autoreload 22732 9604 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:41:30,687 autoreload 2232 6948 Watching for file changes with StatReloader
+INFO 2023-12-25 14:41:30,687 autoreload 15680 11308 Watching for file changes with StatReloader
+INFO 2023-12-25 14:42:16,851 autoreload 15680 11308 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:42:16,857 autoreload 2232 6948 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:42:17,224 autoreload 26424 25960 Watching for file changes with StatReloader
+INFO 2023-12-25 14:42:17,224 autoreload 6304 18756 Watching for file changes with StatReloader
+INFO 2023-12-25 14:42:30,763 autoreload 26424 25960 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:42:30,773 autoreload 6304 18756 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:42:31,135 autoreload 22600 25612 Watching for file changes with StatReloader
+INFO 2023-12-25 14:42:31,140 autoreload 21176 9604 Watching for file changes with StatReloader
+INFO 2023-12-25 14:42:43,288 basehttp 22600 11408 "GET /shop/products HTTP/1.1" 301 0
+INFO 2023-12-25 14:42:43,290 views 22600 4876 Страница "Список продуктов" успешно открыта
+INFO 2023-12-25 14:42:43,295 basehttp 22600 4876 "GET /shop/products/ HTTP/1.1" 200 4998
+INFO 2023-12-25 14:42:50,982 basehttp 22600 4876 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 14:44:15,429 autoreload 21176 9604 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:44:15,525 autoreload 22600 25612 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-25 14:44:15,823 autoreload 7100 14148 Watching for file changes with StatReloader
+INFO 2023-12-25 14:44:15,906 autoreload 2752 25356 Watching for file changes with StatReloader
+INFO 2023-12-25 14:45:53,983 autoreload 7100 14148 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:45:54,045 autoreload 2752 25356 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:45:54,364 autoreload 22064 8624 Watching for file changes with StatReloader
+INFO 2023-12-25 14:45:54,427 autoreload 19740 23156 Watching for file changes with StatReloader
+INFO 2023-12-25 14:46:01,875 basehttp 22064 20604 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 14:46:03,389 basehttp 22064 20604 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 14:46:04,995 basehttp 22064 20604 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 14:46:06,251 basehttp 22064 20604 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-25 14:46:08,387 basehttp 22064 20604 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 14:46:46,715 autoreload 19740 23156 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:46:46,747 autoreload 22064 8624 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:46:47,090 autoreload 13776 20592 Watching for file changes with StatReloader
+INFO 2023-12-25 14:46:47,126 autoreload 23416 23864 Watching for file changes with StatReloader
+INFO 2023-12-25 14:46:52,816 views 13776 6332 Страница "Список продуктов" успешно открыта
+INFO 2023-12-25 14:46:52,823 basehttp 13776 6332 "GET /shop/products/ HTTP/1.1" 200 4998
+INFO 2023-12-25 14:46:54,772 basehttp 13776 6332 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 14:49:05,044 autoreload 23416 23864 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:49:05,112 autoreload 13776 20592 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 14:49:05,422 autoreload 13248 15464 Watching for file changes with StatReloader
+INFO 2023-12-25 14:49:05,496 autoreload 15180 18260 Watching for file changes with StatReloader
+INFO 2023-12-25 14:49:10,123 basehttp 13248 11148 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 14:49:11,369 basehttp 13248 11148 "GET /about_me HTTP/1.1" 301 0
+INFO 2023-12-25 14:49:11,371 views 13248 5720 Страница "О себе" успешно открыта
+INFO 2023-12-25 14:49:11,372 basehttp 13248 5720 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-25 14:49:12,889 basehttp 13248 5720 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 14:49:24,282 autoreload 4228 15668 Watching for file changes with StatReloader
+INFO 2023-12-25 14:49:27,666 basehttp 15180 24112 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 14:49:29,110 views 15180 24112 Страница "Список продуктов" успешно открыта
+INFO 2023-12-25 14:49:29,112 basehttp 15180 24112 "GET /shop/products/ HTTP/1.1" 200 4998
+INFO 2023-12-25 14:49:31,922 basehttp 15180 24112 "GET /shop/choice_product HTTP/1.1" 301 0
+INFO 2023-12-25 14:49:31,928 basehttp 15180 7064 "GET /shop/choice_product/ HTTP/1.1" 200 4009
+INFO 2023-12-25 14:49:33,646 basehttp 15180 7064 "POST /shop/choice_product/ HTTP/1.1" 302 0
+INFO 2023-12-25 14:49:33,651 basehttp 15180 7064 "GET /shop/product/1 HTTP/1.1" 200 3780
+INFO 2023-12-25 14:49:41,675 basehttp 15180 7064 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:11:50,718 autoreload 4228 15668 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:11:50,735 autoreload 15180 18260 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:11:51,109 autoreload 26492 3476 Watching for file changes with StatReloader
+INFO 2023-12-25 15:11:51,144 autoreload 22568 11212 Watching for file changes with StatReloader
+INFO 2023-12-25 15:11:54,608 basehttp 26492 11716 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:12:01,707 views 26492 11716 Страница "О себе" успешно открыта
+INFO 2023-12-25 15:12:01,708 basehttp 26492 11716 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-25 15:12:02,927 basehttp 26492 11716 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:12:27,121 autoreload 22568 11212 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:12:27,205 autoreload 26492 3476 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:12:27,496 autoreload 11536 3248 Watching for file changes with StatReloader
+INFO 2023-12-25 15:12:27,580 autoreload 24732 8060 Watching for file changes with StatReloader
+INFO 2023-12-25 15:12:30,896 basehttp 11536 18360 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:12:32,575 basehttp 11536 18360 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-25 15:12:33,711 basehttp 11536 18360 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:13:15,776 autoreload 24732 8060 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:13:15,805 autoreload 11536 3248 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:13:16,166 autoreload 25020 4196 Watching for file changes with StatReloader
+INFO 2023-12-25 15:13:16,197 autoreload 11516 11824 Watching for file changes with StatReloader
+INFO 2023-12-25 15:13:17,770 basehttp 25020 14428 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:13:19,656 basehttp 25020 14428 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-25 15:13:20,680 basehttp 25020 14428 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:13:49,118 autoreload 11516 11824 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:13:49,235 autoreload 25020 4196 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:13:49,486 autoreload 21352 16444 Watching for file changes with StatReloader
+INFO 2023-12-25 15:13:49,623 autoreload 6124 17380 Watching for file changes with StatReloader
+INFO 2023-12-25 15:14:12,217 autoreload 21352 16444 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:14:12,339 autoreload 6124 17380 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:14:12,599 autoreload 13708 12512 Watching for file changes with StatReloader
+INFO 2023-12-25 15:14:12,721 autoreload 15580 11408 Watching for file changes with StatReloader
+ERROR 2023-12-25 15:14:16,052 log 13708 7216 Internal Server Error: /shop/products/
+Traceback (most recent call last):
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py", line 19, in products
+    products = Product.objects.all().replace('<QuerySet [<', '"').replace('>]>', '"').split('>, <')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'replace'
+ERROR 2023-12-25 15:14:16,053 basehttp 13708 7216 "GET /shop/products/ HTTP/1.1" 500 69669
+INFO 2023-12-25 15:14:46,648 autoreload 15580 11408 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:14:46,652 autoreload 13708 12512 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:14:47,048 autoreload 24328 13724 Watching for file changes with StatReloader
+INFO 2023-12-25 15:14:47,055 autoreload 13784 25160 Watching for file changes with StatReloader
+INFO 2023-12-25 15:14:48,982 views 24328 20340 Страница "Список продуктов" успешно открыта
+INFO 2023-12-25 15:14:48,988 basehttp 24328 20340 "GET /shop/products/ HTTP/1.1" 200 4998
+INFO 2023-12-25 15:14:51,327 basehttp 24328 20340 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:17:50,558 basehttp 24328 20340 "GET /shop/clients HTTP/1.1" 301 0
+INFO 2023-12-25 15:17:50,560 views 24328 10436 Страница "Список клиентов" успешно открыта
+INFO 2023-12-25 15:17:50,562 basehttp 24328 10436 "GET /shop/clients/ HTTP/1.1" 200 4654
+INFO 2023-12-25 15:17:53,497 views 24328 10436 Страница "О себе" успешно открыта
+INFO 2023-12-25 15:17:53,498 basehttp 24328 10436 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-25 15:17:54,568 basehttp 24328 10436 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-25 15:17:55,568 views 24328 10436 Страница "О себе" успешно открыта
+INFO 2023-12-25 15:17:55,569 basehttp 24328 10436 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-25 15:19:19,877 basehttp 24328 10436 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:19:53,355 autoreload 24328 13724 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:19:53,732 autoreload 25460 5576 Watching for file changes with StatReloader
+INFO 2023-12-25 15:19:54,272 autoreload 13784 25160 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:19:54,635 autoreload 19660 25784 Watching for file changes with StatReloader
+INFO 2023-12-25 15:19:57,084 basehttp 25460 14788 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:19:58,768 views 25460 14788 Страница "Список продуктов" успешно открыта
+INFO 2023-12-25 15:19:58,770 basehttp 25460 14788 "GET /shop/products/ HTTP/1.1" 200 4998
+INFO 2023-12-25 15:20:00,124 basehttp 25460 14788 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:20:04,104 views 25460 14788 Страница "О себе" успешно открыта
+INFO 2023-12-25 15:20:04,105 basehttp 25460 14788 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-25 15:20:05,212 basehttp 25460 14788 "GET /admin HTTP/1.1" 301 0
+INFO 2023-12-25 15:20:05,239 basehttp 25460 3576 "GET /admin/ HTTP/1.1" 200 7099
+INFO 2023-12-25 15:20:05,307 basehttp 25460 3576 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2023-12-25 15:20:05,311 basehttp 25460 10164 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2023-12-25 15:20:05,336 basehttp 25460 14740 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2023-12-25 15:20:05,349 basehttp 25460 18236 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2023-12-25 15:20:07,264 views 25460 18236 Страница "Список продуктов" успешно открыта
+INFO 2023-12-25 15:20:07,266 basehttp 25460 18236 "GET /shop/products/ HTTP/1.1" 200 4998
+INFO 2023-12-25 15:20:08,218 basehttp 25460 18236 "GET /shop/choice_product_id_form HTTP/1.1" 301 0
+INFO 2023-12-25 15:20:08,224 basehttp 25460 14740 "GET /shop/choice_product_id_form/ HTTP/1.1" 200 4009
+INFO 2023-12-25 15:20:09,585 basehttp 25460 14740 "GET /shop/choice_product/ HTTP/1.1" 200 4009
+INFO 2023-12-25 15:20:10,998 basehttp 25460 14740 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-25 15:20:11,671 views 25460 14740 Страница "Список клиентов" успешно открыта
+INFO 2023-12-25 15:20:11,673 basehttp 25460 14740 "GET /shop/clients/ HTTP/1.1" 200 4654
+INFO 2023-12-25 15:20:13,924 basehttp 25460 14740 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:24:38,473 autoreload 19660 25784 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\models.py changed, reloading.
+INFO 2023-12-25 15:24:38,849 autoreload 24528 9400 Watching for file changes with StatReloader
+INFO 2023-12-25 15:24:38,966 autoreload 25460 5576 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\models.py changed, reloading.
+INFO 2023-12-25 15:24:39,344 autoreload 12124 18220 Watching for file changes with StatReloader
+INFO 2023-12-25 15:24:42,488 basehttp 24528 25160 "GET /shop/orders/ HTTP/1.1" 200 5037
+INFO 2023-12-25 15:29:50,979 basehttp 24528 26388 "GET /shop/orders/ HTTP/1.1" 200 5081
+INFO 2023-12-25 15:31:45,466 autoreload 23384 13152 Watching for file changes with StatReloader
+ERROR 2023-12-25 15:31:50,066 log 24528 26388 Internal Server Error: /shop/orders/
+Traceback (most recent call last):
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py", line 50, in orders
+    return render(request, 'hw2_shop_app/orders_all.html', context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '()' from 'order.products.all()'
+ERROR 2023-12-25 15:31:50,071 basehttp 24528 26388 "GET /shop/orders/ HTTP/1.1" 500 196800
+INFO 2023-12-25 15:32:12,804 autoreload 21340 13988 Watching for file changes with StatReloader
+INFO 2023-12-25 15:32:15,539 basehttp 24528 26388 "GET /shop/orders/ HTTP/1.1" 200 4852
+INFO 2023-12-25 15:32:37,076 basehttp 24528 26388 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:43:08,464 autoreload 24528 9400 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:43:08,784 autoreload 21340 13988 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:43:08,852 autoreload 8412 21540 Watching for file changes with StatReloader
+INFO 2023-12-25 15:43:09,163 autoreload 26100 13608 Watching for file changes with StatReloader
+INFO 2023-12-25 15:43:13,516 basehttp 8412 15740 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:43:14,533 basehttp 8412 15740 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:44:01,452 autoreload 26100 13608 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:44:01,811 autoreload 15028 5676 Watching for file changes with StatReloader
+INFO 2023-12-25 15:44:02,296 autoreload 8412 21540 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:44:02,664 autoreload 12208 19704 Watching for file changes with StatReloader
+INFO 2023-12-25 15:44:11,113 autoreload 12208 19704 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:44:11,263 autoreload 15028 5676 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:44:11,500 autoreload 16180 8448 Watching for file changes with StatReloader
+INFO 2023-12-25 15:44:11,645 autoreload 23276 17384 Watching for file changes with StatReloader
+INFO 2023-12-25 15:44:14,282 basehttp 16180 14740 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:44:15,019 basehttp 16180 14740 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:44:15,188 basehttp 16180 14740 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:44:15,876 views 16180 14740 Страница "О себе" успешно открыта
+INFO 2023-12-25 15:44:15,877 basehttp 16180 14740 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-25 15:44:17,025 basehttp 16180 14740 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:46:09,209 autoreload 16180 8448 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:46:09,212 autoreload 23276 17384 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:46:09,615 autoreload 13184 3572 Watching for file changes with StatReloader
+INFO 2023-12-25 15:46:09,617 autoreload 10536 6064 Watching for file changes with StatReloader
+INFO 2023-12-25 15:46:11,649 basehttp 13184 17780 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:49:13,465 autoreload 10536 6064 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:49:13,595 autoreload 13184 3572 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:49:13,854 autoreload 22584 11996 Watching for file changes with StatReloader
+INFO 2023-12-25 15:49:13,989 autoreload 12292 17868 Watching for file changes with StatReloader
+INFO 2023-12-25 15:49:18,375 basehttp 22584 25112 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:49:19,120 basehttp 22584 25112 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:49:19,297 basehttp 22584 25112 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:49:21,441 basehttp 22584 25112 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-25 15:49:22,431 basehttp 22584 25112 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:49:45,891 autoreload 22584 11996 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:49:45,904 autoreload 12292 17868 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:49:46,297 autoreload 24848 25840 Watching for file changes with StatReloader
+INFO 2023-12-25 15:49:46,300 autoreload 4224 2448 Watching for file changes with StatReloader
+INFO 2023-12-25 15:49:48,370 basehttp 24848 6036 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:49:49,186 basehttp 24848 6036 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 15:52:18,539 autoreload 4224 2448 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:52:18,646 autoreload 24848 25840 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:52:18,919 autoreload 21252 23388 Watching for file changes with StatReloader
+INFO 2023-12-25 15:52:19,017 autoreload 7508 9160 Watching for file changes with StatReloader
+INFO 2023-12-25 15:52:38,677 autoreload 7508 9160 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:52:39,052 autoreload 12660 19164 Watching for file changes with StatReloader
+INFO 2023-12-25 15:52:39,595 autoreload 21252 23388 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:52:39,960 autoreload 15696 12988 Watching for file changes with StatReloader
+INFO 2023-12-25 15:53:06,676 autoreload 12660 19164 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:53:06,700 autoreload 15696 12988 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:53:07,050 autoreload 18712 25704 Watching for file changes with StatReloader
+INFO 2023-12-25 15:53:07,075 autoreload 6948 7972 Watching for file changes with StatReloader
+INFO 2023-12-25 15:53:26,704 autoreload 18712 25704 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:53:26,714 autoreload 6948 7972 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 15:53:27,091 autoreload 25060 3524 Watching for file changes with StatReloader
+INFO 2023-12-25 15:53:27,109 autoreload 23160 21976 Watching for file changes with StatReloader
+INFO 2023-12-25 15:54:56,999 basehttp 25060 19900 "GET /admin/hw2_shop_app/client/ HTTP/1.1" 200 13719
+INFO 2023-12-25 15:54:57,010 basehttp 25060 19900 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2023-12-25 15:55:02,161 basehttp 25060 19900 "GET /admin/auth/user/ HTTP/1.1" 200 11907
+INFO 2023-12-25 15:55:02,175 basehttp 25060 19900 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2023-12-25 15:55:02,205 basehttp 25060 18604 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2023-12-25 15:55:03,572 basehttp 25060 18604 "GET /admin/auth/group/ HTTP/1.1" 200 8400
+INFO 2023-12-25 15:55:03,585 basehttp 25060 18604 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2023-12-25 15:55:04,712 basehttp 25060 18604 "GET /admin/hw2_shop_app/product/ HTTP/1.1" 200 14418
+INFO 2023-12-25 15:55:04,726 basehttp 25060 18604 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2023-12-25 15:55:07,129 basehttp 25060 18604 "GET /admin/hw2_shop_app/order/ HTTP/1.1" 200 13918
+INFO 2023-12-25 15:55:07,140 basehttp 25060 19900 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2023-12-25 15:55:07,141 basehttp 25060 18604 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2023-12-25 15:55:25,719 basehttp 25060 18604 "GET /admin/hw2_shop_app/order/?q=%D0%9A%D1%80%D0%BE%D0%BD%D1%88%D1%82%D0%B5%D0%B9%D0%BD+ HTTP/1.1" 200 11896
+INFO 2023-12-25 15:55:25,733 basehttp 25060 18604 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2023-12-25 15:55:29,788 basehttp 25060 18604 "GET /admin/ HTTP/1.1" 200 7099
+INFO 2023-12-25 16:33:42,564 views 23160 9660 Страница "О себе" успешно открыта
+INFO 2023-12-25 16:33:42,567 basehttp 23160 9660 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-25 16:33:45,927 basehttp 23160 9660 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 16:33:48,004 basehttp 23160 9660 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-25 16:33:49,062 views 23160 9660 Страница "О себе" успешно открыта
+INFO 2023-12-25 16:33:49,063 basehttp 23160 9660 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-25 16:33:50,296 views 23160 9660 Страница "Список продуктов" успешно открыта
+INFO 2023-12-25 16:33:50,298 basehttp 23160 9660 "GET /shop/products/ HTTP/1.1" 200 4998
+INFO 2023-12-25 16:35:10,258 basehttp 23160 9660 "GET /shop/orders/ HTTP/1.1" 200 4856
+INFO 2023-12-25 16:35:59,623 basehttp 23160 9660 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 16:39:43,502 autoreload 23160 21976 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 16:39:43,891 autoreload 7044 3924 Watching for file changes with StatReloader
+INFO 2023-12-25 16:39:47,483 basehttp 7044 21144 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 16:40:09,779 autoreload 7044 3924 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 16:40:10,149 autoreload 22244 22736 Watching for file changes with StatReloader
+INFO 2023-12-25 16:46:57,967 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:46:59,118 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:47:50,512 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 16:48:27,606 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:48:28,221 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:48:28,390 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:48:28,550 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:48:28,709 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+ERROR 2023-12-25 16:48:54,989 log 22244 10244 Internal Server Error: /shop/orders/
+Traceback (most recent call last):
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py", line 50, in orders
+    return render(request, 'hw2_shop_app/orders_all.html', context=context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\defaulttags.py", line 860, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[order.id]' from 'products[order.id]'
+ERROR 2023-12-25 16:48:54,995 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 500 197793
+INFO 2023-12-25 16:49:20,873 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 16:50:30,215 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:51:58,732 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:52:17,652 basehttp 22244 10244 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:52:33,322 autoreload 5396 25172 Watching for file changes with StatReloader
+INFO 2023-12-25 16:52:35,356 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:52:52,294 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:52:52,979 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:53:08,230 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:53:08,861 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 4756
+INFO 2023-12-25 16:53:16,781 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 16:56:29,794 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 3568
+INFO 2023-12-25 16:56:30,903 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 3568
+INFO 2023-12-25 16:56:32,077 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 3568
+INFO 2023-12-25 16:57:08,869 basehttp 5396 25156 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 16:59:30,872 autoreload 5396 25172 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 16:59:31,249 autoreload 7644 9608 Watching for file changes with StatReloader
+INFO 2023-12-25 16:59:32,579 basehttp 7644 23324 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 17:00:22,375 basehttp 7644 23324 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-25 17:00:24,862 basehttp 7644 23324 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 17:00:27,139 views 7644 23324 Страница "Список продуктов" успешно открыта
+INFO 2023-12-25 17:00:27,141 basehttp 7644 23324 "GET /shop/products/ HTTP/1.1" 200 4998
+INFO 2023-12-25 17:00:28,459 basehttp 7644 23324 "GET /shop/choice_product_id_form/ HTTP/1.1" 200 4009
+INFO 2023-12-25 17:00:30,228 basehttp 7644 23324 "GET /shop/choice_product/ HTTP/1.1" 200 4009
+INFO 2023-12-25 17:00:32,423 basehttp 7644 23324 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 17:01:05,460 autoreload 7644 9608 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:01:05,839 autoreload 6792 8072 Watching for file changes with StatReloader
+INFO 2023-12-25 17:01:07,489 basehttp 6792 23188 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 17:01:08,225 basehttp 6792 23188 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 17:01:08,393 basehttp 6792 23188 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 17:01:08,553 basehttp 6792 23188 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 17:01:25,818 basehttp 6792 23188 "GET /shop/orders/ HTTP/1.1" 200 4856
+INFO 2023-12-25 17:01:57,214 autoreload 6792 8072 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:01:57,594 autoreload 13288 24472 Watching for file changes with StatReloader
+INFO 2023-12-25 17:02:00,055 basehttp 13288 7876 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 17:02:07,163 autoreload 13288 24472 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:02:07,538 autoreload 3524 8968 Watching for file changes with StatReloader
+INFO 2023-12-25 17:03:48,744 autoreload 3524 8968 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:03:49,110 autoreload 8748 16704 Watching for file changes with StatReloader
+ERROR 2023-12-25 17:03:51,648 log 8748 4756 Internal Server Error: /shop/orders/
+Traceback (most recent call last):
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py", line 47, in orders
+    products[order.id] = str(order.products.all()).replace('<QuerySet [<', '').replace('>]>', '').split('>','<')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'str' object cannot be interpreted as an integer
+ERROR 2023-12-25 17:03:51,650 basehttp 8748 4756 "GET /shop/orders/ HTTP/1.1" 500 71626
+INFO 2023-12-25 17:04:18,061 autoreload 8748 16704 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:04:18,440 autoreload 17080 19308 Watching for file changes with StatReloader
+ERROR 2023-12-25 17:04:19,800 log 17080 18968 Internal Server Error: /shop/orders/
+Traceback (most recent call last):
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py", line 47, in orders
+    products[order.id] = str(order.products.all()).replace('<QuerySet [<', '').replace('>]>', '').split('>','<')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'str' object cannot be interpreted as an integer
+ERROR 2023-12-25 17:04:19,802 basehttp 17080 18968 "GET /shop/orders/ HTTP/1.1" 500 71626
+INFO 2023-12-25 17:05:52,696 autoreload 17080 19308 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:05:53,063 autoreload 11948 23416 Watching for file changes with StatReloader
+INFO 2023-12-25 17:06:19,815 autoreload 11948 23416 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:06:20,194 autoreload 20012 2384 Watching for file changes with StatReloader
+INFO 2023-12-25 17:06:31,654 autoreload 20012 2384 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:06:32,021 autoreload 24668 17160 Watching for file changes with StatReloader
+INFO 2023-12-25 17:06:46,560 autoreload 24668 17160 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\urls.py changed, reloading.
+INFO 2023-12-25 17:06:46,924 autoreload 4600 20448 Watching for file changes with StatReloader
+ERROR 2023-12-25 17:06:49,344 log 4600 15460 Internal Server Error: /shop/orders/
+Traceback (most recent call last):
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DjangoGB_HW\DjangoGB_HW\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: orders() missing 1 required positional argument: 'id_client'
+ERROR 2023-12-25 17:06:49,346 basehttp 4600 15460 "GET /shop/orders/ HTTP/1.1" 500 66900
+INFO 2023-12-25 17:08:07,922 autoreload 4600 20448 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:08:08,298 autoreload 17872 9084 Watching for file changes with StatReloader
+INFO 2023-12-25 17:08:10,548 basehttp 17872 6332 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-25 17:09:10,892 autoreload 17872 9084 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:09:11,270 autoreload 13056 18384 Watching for file changes with StatReloader
+INFO 2023-12-25 17:09:15,319 basehttp 13056 13772 "GET /shop/orders/ HTTP/1.1" 200 3568
+INFO 2023-12-25 17:09:38,170 autoreload 13056 18384 D:\DjangoGB_HW\DjangoGB_HW\HW_4\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-25 17:09:38,550 autoreload 16604 13376 Watching for file changes with StatReloader
+INFO 2023-12-25 17:09:42,422 basehttp 16604 10644 "GET /shop/orders/ HTTP/1.1" 200 5085
+INFO 2023-12-26 19:04:04,682 autoreload 3508 17356 Watching for file changes with StatReloader
+INFO 2023-12-26 19:04:11,143 basehttp 3508 3800 "GET /shop/orders/ HTTP/1.1" 200 5085
+WARNING 2023-12-26 19:04:11,222 log 3508 3800 Not Found: /favicon.ico
+WARNING 2023-12-26 19:04:11,222 basehttp 3508 3800 "GET /favicon.ico HTTP/1.1" 404 4592
+WARNING 2023-12-26 19:04:21,630 log 3508 3800 Not Found: /_debug_
+WARNING 2023-12-26 19:04:21,630 basehttp 3508 3800 "GET /_debug_ HTTP/1.1" 404 5799
+INFO 2023-12-26 19:06:55,230 autoreload 3508 17356 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-26 19:06:55,605 autoreload 13240 7932 Watching for file changes with StatReloader
+WARNING 2023-12-26 19:07:00,247 log 13240 7032 Not Found: /_debug_
+WARNING 2023-12-26 19:07:00,247 basehttp 13240 7032 "GET /_debug_ HTTP/1.1" 404 5799
+INFO 2023-12-26 19:10:16,357 autoreload 13240 7932 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:10:16,762 autoreload 14776 6908 Watching for file changes with StatReloader
+INFO 2023-12-26 19:10:29,506 autoreload 14776 6908 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:10:29,881 autoreload 22760 20044 Watching for file changes with StatReloader
+INFO 2023-12-26 19:10:36,336 autoreload 22760 20044 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:10:36,723 autoreload 14684 7544 Watching for file changes with StatReloader
+INFO 2023-12-26 19:11:58,775 autoreload 14684 7544 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:13:25,754 autoreload 26140 23516 Watching for file changes with StatReloader
+INFO 2023-12-26 19:13:46,566 autoreload 26140 23516 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:13:46,984 autoreload 11664 9064 Watching for file changes with StatReloader
+INFO 2023-12-26 19:14:13,971 autoreload 11664 9064 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:14:14,359 autoreload 16624 11580 Watching for file changes with StatReloader
+INFO 2023-12-26 19:14:17,733 autoreload 16624 11580 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:14:18,123 autoreload 18188 8352 Watching for file changes with StatReloader
+WARNING 2023-12-26 19:14:23,004 log 18188 24416 Not Found: /_debug_
+WARNING 2023-12-26 19:14:23,004 basehttp 18188 24416 "GET /_debug_ HTTP/1.1" 404 14752
+INFO 2023-12-26 19:14:23,013 basehttp 18188 11796 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2023-12-26 19:14:23,014 basehttp 18188 24276 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+INFO 2023-12-26 19:14:23,014 basehttp 18188 24416 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12621
+INFO 2023-12-26 19:14:23,018 basehttp 18188 24416 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4527
+INFO 2023-12-26 19:14:54,446 autoreload 18188 8352 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:14:54,852 autoreload 2872 13056 Watching for file changes with StatReloader
+INFO 2023-12-26 19:15:53,590 autoreload 2872 13056 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-26 19:15:53,987 autoreload 23356 9860 Watching for file changes with StatReloader
+WARNING 2023-12-26 19:16:06,835 log 23356 8956 Not Found: /__debug__
+WARNING 2023-12-26 19:16:06,835 basehttp 23356 8956 "GET /__debug__ HTTP/1.1" 404 14778
+INFO 2023-12-26 19:16:06,844 basehttp 23356 8956 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2023-12-26 19:16:06,844 basehttp 23356 22908 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2023-12-26 19:16:06,844 basehttp 23356 22820 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2023-12-26 19:16:06,848 basehttp 23356 22820 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2023-12-26 19:16:25,185 autoreload 23356 9860 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-26 19:16:25,572 autoreload 14492 19984 Watching for file changes with StatReloader
+WARNING 2023-12-26 19:16:29,843 log 14492 17992 Not Found: /__debug__
+WARNING 2023-12-26 19:16:29,843 basehttp 14492 17992 "GET /__debug__ HTTP/1.1" 404 13550
+INFO 2023-12-26 19:16:57,011 basehttp 14492 17992 "GET / HTTP/1.1" 200 12613
+INFO 2023-12-26 19:17:16,361 autoreload 14492 19984 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:17:16,802 autoreload 25896 23092 Watching for file changes with StatReloader
+INFO 2023-12-26 19:17:19,740 basehttp 25896 12376 "GET / HTTP/1.1" 200 13410
+INFO 2023-12-26 19:18:07,701 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=SettingsPanel HTTP/1.1" 200 27349
+INFO 2023-12-26 19:18:42,113 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=HeadersPanel HTTP/1.1" 200 5426
+INFO 2023-12-26 19:18:48,638 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=RequestPanel HTTP/1.1" 200 2316
+INFO 2023-12-26 19:19:20,791 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=SQLPanel HTTP/1.1" 200 26140
+INFO 2023-12-26 19:20:03,828 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=StaticFilesPanel HTTP/1.1" 200 32068
+INFO 2023-12-26 19:20:42,194 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=TemplatesPanel HTTP/1.1" 200 5877
+INFO 2023-12-26 19:20:55,096 basehttp 25896 12376 "GET /__debug__/render_panel/?store_id=7a6dbdd768ab4156a75e49f40e864348&panel_id=SignalsPanel HTTP/1.1" 200 2231
+INFO 2023-12-26 19:29:02,142 autoreload 25896 23092 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:29:02,547 autoreload 9492 6404 Watching for file changes with StatReloader
+INFO 2023-12-26 19:29:30,527 autoreload 9492 6404 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:29:30,932 autoreload 13496 24324 Watching for file changes with StatReloader
+INFO 2023-12-26 19:30:12,265 autoreload 13496 24324 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-26 19:30:12,663 autoreload 16892 17152 Watching for file changes with StatReloader
+INFO 2023-12-26 19:30:50,888 autoreload 16892 17152 D:\DjangoGB_HW\DjangoGB_HW\HW_5\myproject\myproject\settings.py changed, reloading.
