@@ -1,0 +1,292 @@
+INFO 2023-12-11 17:38:10,261 autoreload 952 17616 Watching for file changes with StatReloader
+INFO 2023-12-11 17:38:44,328 autoreload 26484 19384 Watching for file changes with StatReloader
+WARNING 2023-12-11 17:38:45,833 log 26484 2540 Not Found: /
+WARNING 2023-12-11 17:38:45,834 basehttp 26484 2540 "GET / HTTP/1.1" 404 2507
+WARNING 2023-12-11 17:39:02,153 log 26484 2540 Not Found: /abot_me
+WARNING 2023-12-11 17:39:02,154 basehttp 26484 2540 "GET /abot_me HTTP/1.1" 404 2546
+INFO 2023-12-11 17:39:07,403 basehttp 26484 2540 "GET /about_me HTTP/1.1" 301 0
+INFO 2023-12-11 17:39:07,404 views 26484 2784 Страница "О себе" успешно открыта
+ERROR 2023-12-11 17:39:07,492 log 26484 2784 Internal Server Error: /about_me/
+Traceback (most recent call last):
+  File "D:\GB Django\venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: shop_app/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\GB Django\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\myproject\hw1_aboutmeapp\views.py", line 38, in about_me
+    return render(request, 'about_me.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\GB Django\venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "D:\GB Django\venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: shop_app/base.html
+ERROR 2023-12-11 17:39:07,495 basehttp 26484 2784 "GET /about_me/ HTTP/1.1" 500 130617
+INFO 2023-12-11 17:41:20,508 autoreload 3792 14260 Watching for file changes with StatReloader
+WARNING 2023-12-11 17:41:21,333 log 3792 24100 Not Found: /
+WARNING 2023-12-11 17:41:21,334 basehttp 3792 24100 "GET / HTTP/1.1" 404 2507
+INFO 2023-12-11 17:41:31,699 views 3792 24100 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:41:31,702 basehttp 3792 24100 "GET /about_me/ HTTP/1.1" 200 123
+INFO 2023-12-11 17:42:19,691 views 3792 24100 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:42:19,692 basehttp 3792 24100 "GET /about_me/ HTTP/1.1" 200 6007
+INFO 2023-12-11 17:42:27,216 views 3792 24100 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:42:27,217 basehttp 3792 24100 "GET /about_me/ HTTP/1.1" 200 6007
+INFO 2023-12-11 17:42:29,920 basehttp 3792 24100 "GET /admin HTTP/1.1" 301 0
+INFO 2023-12-11 17:42:29,934 basehttp 3792 360 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-12-11 17:42:29,995 basehttp 3792 360 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+INFO 2023-12-11 17:42:30,061 basehttp 3792 360 "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2023-12-11 17:42:30,072 basehttp 3792 360 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2023-12-11 17:42:30,077 basehttp 3792 7300 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2023-12-11 17:42:30,097 basehttp 3792 14056 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2023-12-11 17:42:30,126 basehttp 3792 24676 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2023-12-11 17:42:30,141 basehttp 3792 25720 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2023-12-11 17:42:30,141 basehttp 3792 5496 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+WARNING 2023-12-11 17:42:34,464 log 3792 5496 Not Found: /shop/products
+WARNING 2023-12-11 17:42:34,464 basehttp 3792 5496 "GET /shop/products HTTP/1.1" 404 2564
+INFO 2023-12-11 17:43:37,393 views 3792 5496 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:43:37,394 basehttp 3792 5496 "GET /about_me/ HTTP/1.1" 200 6007
+INFO 2023-12-11 17:43:38,842 views 3792 5496 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:43:38,842 basehttp 3792 5496 "GET /about_me/ HTTP/1.1" 200 6007
+WARNING 2023-12-11 17:43:45,328 log 3792 5496 Not Found: /shop/choice_product_id_form
+WARNING 2023-12-11 17:43:45,328 basehttp 3792 5496 "GET /shop/choice_product_id_form HTTP/1.1" 404 2606
+INFO 2023-12-11 17:55:01,123 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:55:01,124 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3733
+WARNING 2023-12-11 17:55:01,133 log 3792 11020 Not Found: /assets/images/7578353-vdt.jpg
+WARNING 2023-12-11 17:55:01,134 basehttp 3792 11020 "GET /assets/images/7578353-vdt.jpg HTTP/1.1" 404 2612
+INFO 2023-12-11 17:56:12,677 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:56:12,685 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:56:12,696 log 3792 11020 Not Found: /assets/images/i.webp
+WARNING 2023-12-11 17:56:12,696 basehttp 3792 11020 "GET /assets/images/i.webp HTTP/1.1" 404 2585
+INFO 2023-12-11 17:56:13,381 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:56:13,382 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:56:13,392 log 3792 11020 Not Found: /assets/images/i.webp
+WARNING 2023-12-11 17:56:13,392 basehttp 3792 11020 "GET /assets/images/i.webp HTTP/1.1" 404 2585
+INFO 2023-12-11 17:57:27,604 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:57:27,605 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:57:27,616 log 3792 11020 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:57:27,616 basehttp 3792 11020 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 17:57:28,730 views 3792 11020 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:57:28,731 basehttp 3792 11020 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:57:28,743 log 3792 11020 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:57:28,743 basehttp 3792 11020 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 17:57:43,283 autoreload 8596 12672 Watching for file changes with StatReloader
+WARNING 2023-12-11 17:57:44,555 log 8596 9140 Not Found: /
+WARNING 2023-12-11 17:57:44,556 basehttp 8596 9140 "GET / HTTP/1.1" 404 2507
+INFO 2023-12-11 17:57:59,041 views 8596 9140 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:57:59,053 basehttp 8596 9140 "GET /about_me/ HTTP/1.1" 200 3724
+WARNING 2023-12-11 17:57:59,065 log 8596 9140 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:57:59,065 basehttp 8596 9140 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+WARNING 2023-12-11 17:58:02,031 log 8596 9140 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:58:02,031 basehttp 8596 9140 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 17:58:54,236 views 8596 9140 Страница "О себе" успешно открыта
+INFO 2023-12-11 17:58:54,237 basehttp 8596 9140 "GET /about_me/ HTTP/1.1" 200 3735
+WARNING 2023-12-11 17:58:54,249 log 8596 9140 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 17:58:54,249 basehttp 8596 9140 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 18:02:21,787 views 8596 9140 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:02:21,788 basehttp 8596 9140 "GET /about_me/ HTTP/1.1" 200 3828
+INFO 2023-12-11 18:08:21,136 views 8596 14928 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:08:21,137 basehttp 8596 14928 "GET /about_me/ HTTP/1.1" 200 3905
+WARNING 2023-12-11 18:08:21,148 log 8596 14928 Not Found: /myproject/hw1_aboutmeapp/assets/images/VD.png
+WARNING 2023-12-11 18:08:21,148 basehttp 8596 14928 "GET /myproject/hw1_aboutmeapp/assets/images/VD.png HTTP/1.1" 404 2660
+INFO 2023-12-11 18:09:39,103 views 8596 14928 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:09:39,104 basehttp 8596 14928 "GET /about_me/ HTTP/1.1" 200 3882
+WARNING 2023-12-11 18:09:39,116 log 8596 14928 Not Found: /assets/images/VD.png
+WARNING 2023-12-11 18:09:39,116 basehttp 8596 14928 "GET /assets/images/VD.png HTTP/1.1" 404 2585
+INFO 2023-12-11 18:10:58,953 autoreload 8596 12672 D:\GB Django\myproject\hw1_aboutmeapp\urls.py changed, reloading.
+INFO 2023-12-11 18:10:59,316 autoreload 17208 4872 Watching for file changes with StatReloader
+INFO 2023-12-11 18:11:00,050 views 17208 21192 Страница "Главная" успешно открыта
+INFO 2023-12-11 18:11:00,051 basehttp 17208 21192 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-11 18:11:04,476 views 17208 21192 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:11:04,479 basehttp 17208 21192 "GET /about_me/? HTTP/1.1" 200 3829
+INFO 2023-12-11 18:19:06,842 autoreload 7700 23120 Watching for file changes with StatReloader
+INFO 2023-12-11 18:19:07,633 views 7700 3124 Страница "Главная" успешно открыта
+INFO 2023-12-11 18:19:07,634 basehttp 7700 3124 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-11 18:19:14,161 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:19:14,164 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 4155
+INFO 2023-12-11 18:21:30,307 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:21:30,308 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 4396
+INFO 2023-12-11 18:21:47,866 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:21:47,867 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 4398
+INFO 2023-12-11 18:23:48,402 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:23:48,403 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-11 18:23:49,635 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:23:49,636 basehttp 7700 3124 "GET /about_me/ HTTP/1.1" 200 2773
+INFO 2023-12-11 18:23:50,275 views 7700 3124 Страница "Главная" успешно открыта
+INFO 2023-12-11 18:23:50,276 basehttp 7700 3124 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-11 18:23:51,936 views 7700 3124 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:23:51,936 basehttp 7700 3124 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-11 18:25:37,204 autoreload 8712 3284 Watching for file changes with StatReloader
+INFO 2023-12-11 18:25:37,955 views 8712 13384 Страница "Главная" успешно открыта
+INFO 2023-12-11 18:25:37,956 basehttp 8712 13384 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-11 18:25:39,414 views 8712 13384 Страница "О себе" успешно открыта
+INFO 2023-12-11 18:25:39,417 basehttp 8712 13384 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-13 20:14:19,134 autoreload 2540 13888 Watching for file changes with StatReloader
+INFO 2023-12-13 20:51:02,893 autoreload 4536 19396 Watching for file changes with StatReloader
+INFO 2023-12-13 20:51:05,911 views 4536 12208 Страница "Главная" успешно открыта
+INFO 2023-12-13 20:51:05,911 basehttp 4536 12208 "GET / HTTP/1.1" 200 1023
+WARNING 2023-12-13 20:51:05,946 log 4536 12208 Not Found: /favicon.ico
+WARNING 2023-12-13 20:51:05,947 basehttp 4536 12208 "GET /favicon.ico HTTP/1.1" 404 4918
+INFO 2023-12-13 20:51:07,501 views 4536 12208 Страница "О себе" успешно открыта
+INFO 2023-12-13 20:51:07,504 basehttp 4536 12208 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-13 20:51:08,806 basehttp 4536 12208 "GET /about_me HTTP/1.1" 301 0
+INFO 2023-12-13 20:51:08,807 views 4536 11380 Страница "О себе" успешно открыта
+INFO 2023-12-13 20:51:08,808 basehttp 4536 11380 "GET /about_me/ HTTP/1.1" 200 2773
+INFO 2023-12-13 20:51:10,001 views 4536 11380 Страница "Главная" успешно открыта
+INFO 2023-12-13 20:51:10,002 basehttp 4536 11380 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 20:54:43,256 autoreload 21084 10824 Watching for file changes with StatReloader
+INFO 2023-12-13 20:58:39,948 views 21084 19136 Страница "О себе" успешно открыта
+INFO 2023-12-13 20:58:39,951 basehttp 21084 19136 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-13 20:58:41,978 views 21084 19136 Страница "О себе" успешно открыта
+INFO 2023-12-13 20:58:41,978 basehttp 21084 19136 "GET /about_me/ HTTP/1.1" 200 2773
+INFO 2023-12-13 20:58:42,582 views 21084 19136 Страница "Главная" успешно открыта
+INFO 2023-12-13 20:58:42,583 basehttp 21084 19136 "GET / HTTP/1.1" 200 1023
+WARNING 2023-12-13 20:59:08,082 log 21084 19136 Not Found: /shop
+WARNING 2023-12-13 20:59:08,083 basehttp 21084 19136 "GET /shop HTTP/1.1" 404 4897
+WARNING 2023-12-13 20:59:30,611 log 21084 19136 Not Found: /main
+WARNING 2023-12-13 20:59:30,611 basehttp 21084 19136 "GET /main HTTP/1.1" 404 4897
+INFO 2023-12-13 20:59:39,666 basehttp 21084 19136 "GET /prefix HTTP/1.1" 301 0
+INFO 2023-12-13 20:59:39,667 basehttp 21084 5336 "GET /prefix/ HTTP/1.1" 200 13
+INFO 2023-12-13 20:59:45,272 views 21084 5336 Страница "Главная" успешно открыта
+INFO 2023-12-13 20:59:45,273 basehttp 21084 5336 "GET // HTTP/1.1" 200 1023
+INFO 2023-12-13 21:00:07,138 autoreload 21084 10824 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:00:07,500 autoreload 16684 10904 Watching for file changes with StatReloader
+WARNING 2023-12-13 21:00:13,330 log 16684 16528 Not Found: /shop
+WARNING 2023-12-13 21:00:13,330 basehttp 16684 16528 "GET /shop HTTP/1.1" 404 2637
+WARNING 2023-12-13 21:02:14,542 log 16684 16528 Not Found: /shop
+WARNING 2023-12-13 21:02:14,543 basehttp 16684 16528 "GET /shop HTTP/1.1" 404 2637
+WARNING 2023-12-13 21:02:16,865 log 16684 16528 Not Found: /shop
+WARNING 2023-12-13 21:02:16,866 basehttp 16684 16528 "GET /shop HTTP/1.1" 404 2637
+INFO 2023-12-13 21:02:26,743 views 16684 16528 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:02:26,743 basehttp 16684 16528 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:02:28,247 views 16684 16528 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:02:28,250 basehttp 16684 16528 "GET /about_me/? HTTP/1.1" 200 2773
+INFO 2023-12-13 21:02:52,154 views 16684 16528 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:02:52,156 basehttp 16684 16528 "GET /about_me/? HTTP/1.1" 200 4362
+WARNING 2023-12-13 21:02:54,336 log 16684 16528 Not Found: /shop/products
+WARNING 2023-12-13 21:02:54,336 basehttp 16684 16528 "GET /shop/products HTTP/1.1" 404 2664
+INFO 2023-12-13 21:08:52,643 autoreload 16684 10904 D:\GB Django\myproject\myproject\settings.py changed, reloading.
+INFO 2023-12-13 21:08:53,007 autoreload 24656 21620 Watching for file changes with StatReloader
+INFO 2023-12-13 21:08:57,854 autoreload 22608 9144 Watching for file changes with StatReloader
+INFO 2023-12-13 21:08:59,308 views 22608 14260 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:08:59,308 basehttp 22608 14260 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:09:00,677 views 22608 14260 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:09:00,681 basehttp 22608 14260 "GET /about_me/? HTTP/1.1" 200 4362
+WARNING 2023-12-13 21:09:02,678 log 22608 14260 Not Found: /shop/products
+WARNING 2023-12-13 21:09:02,679 basehttp 22608 14260 "GET /shop/products HTTP/1.1" 404 2664
+INFO 2023-12-13 21:16:07,714 autoreload 13400 1852 Watching for file changes with StatReloader
+INFO 2023-12-13 21:22:39,890 autoreload 22608 9144 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:22:40,260 autoreload 4132 17584 Watching for file changes with StatReloader
+INFO 2023-12-13 21:22:45,717 autoreload 10676 21452 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:21,347 autoreload 4132 17584 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:23:21,691 autoreload 10676 21452 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:23:21,719 autoreload 6836 26548 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:25,787 autoreload 1472 19208 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:37,243 autoreload 1472 19208 D:\GB Django\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-13 21:23:37,243 autoreload 6836 26548 D:\GB Django\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-13 21:23:37,632 autoreload 19164 9644 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:37,632 autoreload 16728 16196 Watching for file changes with StatReloader
+INFO 2023-12-13 21:23:41,751 views 16728 6780 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:23:41,752 basehttp 16728 6780 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:23:43,512 views 16728 6780 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:23:43,515 basehttp 16728 6780 "GET /about_me/? HTTP/1.1" 200 4362
+WARNING 2023-12-13 21:23:44,705 log 16728 6780 Not Found: /shop/clients
+WARNING 2023-12-13 21:23:44,705 basehttp 16728 6780 "GET /shop/clients HTTP/1.1" 404 4981
+INFO 2023-12-13 21:26:17,536 autoreload 16728 16196 D:\GB Django\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-13 21:26:17,898 autoreload 2132 21016 Watching for file changes with StatReloader
+INFO 2023-12-13 21:26:18,240 autoreload 19164 9644 D:\GB Django\myproject\hw2_shop_app\views.py changed, reloading.
+INFO 2023-12-13 21:26:18,602 autoreload 15164 10052 Watching for file changes with StatReloader
+INFO 2023-12-13 21:26:19,714 views 2132 23428 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:26:19,714 basehttp 2132 23428 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:26:21,038 views 2132 23428 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:26:21,041 basehttp 2132 23428 "GET /about_me/? HTTP/1.1" 200 4362
+WARNING 2023-12-13 21:26:22,587 log 2132 23428 Not Found: /shop/products
+WARNING 2023-12-13 21:26:22,588 basehttp 2132 23428 "GET /shop/products HTTP/1.1" 404 4984
+INFO 2023-12-13 21:32:19,165 autoreload 15164 10052 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:32:19,541 autoreload 11840 11884 Watching for file changes with StatReloader
+INFO 2023-12-13 21:32:19,881 autoreload 2132 21016 D:\GB Django\myproject\myproject\urls.py changed, reloading.
+INFO 2023-12-13 21:32:20,247 autoreload 18960 6932 Watching for file changes with StatReloader
+INFO 2023-12-13 21:32:21,601 views 11840 25376 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:32:21,602 basehttp 11840 25376 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:32:22,583 views 11840 25376 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:32:22,586 basehttp 11840 25376 "GET /about_me/? HTTP/1.1" 200 4362
+INFO 2023-12-13 21:32:24,142 basehttp 11840 25376 "GET /shop/products HTTP/1.1" 301 0
+INFO 2023-12-13 21:32:24,144 views 11840 17144 Страница "Список продуктов" успешно открыта
+INFO 2023-12-13 21:32:24,149 basehttp 11840 17144 "GET /shop/products/ HTTP/1.1" 200 4504
+INFO 2023-12-13 21:32:25,987 basehttp 11840 17144 "GET /shop/clients HTTP/1.1" 301 0
+INFO 2023-12-13 21:32:25,989 views 11840 2736 Страница "Список клиентов" успешно открыта
+INFO 2023-12-13 21:32:25,991 basehttp 11840 2736 "GET /shop/clients/ HTTP/1.1" 200 4654
+INFO 2023-12-13 21:32:28,012 views 11840 2736 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:32:28,012 basehttp 11840 2736 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-13 21:32:28,883 basehttp 11840 2736 "GET /admin HTTP/1.1" 301 0
+INFO 2023-12-13 21:32:28,891 basehttp 11840 16412 "GET /admin/ HTTP/1.1" 302 0
+INFO 2023-12-13 21:32:28,911 basehttp 11840 16412 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158
+INFO 2023-12-13 21:32:28,973 basehttp 11840 16412 "GET /static/admin/css/base.css HTTP/1.1" 200 21544
+INFO 2023-12-13 21:32:28,975 basehttp 11840 16412 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2023-12-13 21:32:28,989 basehttp 11840 17144 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17905
+INFO 2023-12-13 21:32:29,032 basehttp 11840 25376 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682
+INFO 2023-12-13 21:32:29,040 basehttp 11840 24052 "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+INFO 2023-12-13 21:32:29,053 basehttp 11840 5984 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2023-12-13 21:32:29,056 basehttp 11840 24648 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2023-12-13 21:32:34,863 views 11840 24648 Страница "Главная" успешно открыта
+INFO 2023-12-13 21:32:34,863 basehttp 11840 24648 "GET / HTTP/1.1" 200 1023
+INFO 2023-12-13 21:33:28,716 autoreload 11840 11884 D:\GB Django\myproject\hw1_aboutmeapp\urls.py changed, reloading.
+INFO 2023-12-13 21:33:28,889 autoreload 18960 6932 D:\GB Django\myproject\hw1_aboutmeapp\urls.py changed, reloading.
+INFO 2023-12-13 21:33:29,092 autoreload 10956 16940 Watching for file changes with StatReloader
+INFO 2023-12-13 21:33:29,255 autoreload 8156 19776 Watching for file changes with StatReloader
+INFO 2023-12-13 21:33:30,787 basehttp 10956 15080 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-13 21:34:01,513 views 10956 15080 Страница "О себе" успешно открыта
+INFO 2023-12-13 21:34:01,515 basehttp 10956 15080 "GET /about_me/ HTTP/1.1" 200 4362
+INFO 2023-12-13 21:34:03,397 basehttp 10956 15080 "GET /shop/orders HTTP/1.1" 301 0
+INFO 2023-12-13 21:34:03,405 basehttp 10956 25128 "GET /shop/orders/ HTTP/1.1" 200 5019
+INFO 2023-12-13 21:36:50,212 autoreload 5996 12480 Watching for file changes with StatReloader
+INFO 2023-12-13 21:36:51,335 basehttp 5996 3008 "GET / HTTP/1.1" 200 3630
+INFO 2023-12-13 21:36:54,198 views 5996 3008 Страница "Список продуктов" успешно открыта
+INFO 2023-12-13 21:36:54,203 basehttp 5996 3008 "GET /shop/products/ HTTP/1.1" 200 4990
+INFO 2023-12-13 21:37:08,227 basehttp 5996 3008 "GET /shop/choice_products_by_client_by_days HTTP/1.1" 301 0
+INFO 2023-12-13 21:37:08,234 basehttp 5996 14228 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-13 21:37:11,824 basehttp 5996 14228 "POST /shop/choice_products_by_client_by_days/ HTTP/1.1" 302 0
+INFO 2023-12-13 21:37:11,828 basehttp 5996 14228 "GET /shop/client_products_sorted/1/1/ HTTP/1.1" 200 3660
+INFO 2023-12-13 21:37:15,840 basehttp 5996 14228 "GET /shop/choice_products_by_client_by_days/ HTTP/1.1" 200 4112
+INFO 2023-12-13 21:37:20,565 basehttp 5996 14228 "POST /shop/choice_products_by_client_by_days/ HTTP/1.1" 302 0
+INFO 2023-12-13 21:37:20,568 basehttp 5996 14228 "GET /shop/client_products_sorted/2/45/ HTTP/1.1" 200 3674
